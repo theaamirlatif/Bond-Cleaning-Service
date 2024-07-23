@@ -246,7 +246,6 @@ body {
     text-decoration: none;
 }
 
-
 /* drop down */
 #submenu {
     left: 0;
@@ -297,7 +296,6 @@ li:hover ul#submenu {
 .bcs-hero {
     position: relative;
     background-image: url('./assets/images/image-22.png');
-    /* Replace with your image URL */
     background-size: cover;
     background-position: center;
     display: flex;
