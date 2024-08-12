@@ -4,40 +4,217 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="header.css">
+    <title>Responsive Header</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Add your custom styles here */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background: #333;
+            color: white;
+            padding: 10px 20px;
+            position: relative;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo img {
+            height: 40px;
+        }
+
+        .nav-menu {
+            display: flex;
+        }
+
+        .nav-menu ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .nav-menu ul li {
+            position: relative;
+            margin: 0 15px;
+        }
+
+        .nav-menu ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-menu .submenu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #444;
+            list-style: none;
+            padding: 10px;
+            margin: 0;
+            width: 200px;
+        }
+
+        .nav-menu .submenu li {
+            margin: 0;
+        }
+
+        .nav-menu .submenu li a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            padding: 5px 10px;
+        }
+
+        .nav-menu .has-submenu:hover .submenu {
+            display: block;
+        }
+
+        .nav-menu .has-submenu .arrow {
+            margin-left: 8px;
+            transition: transform 0.3s ease, color 0.3s ease;
+            font-size: 14px;
+            /* Adjust font size if needed */
+        }
+
+        /* Change the arrow direction on hover */
+        .nav-menu .has-submenu:hover .arrow {
+            transform: rotate(180deg);
+        }
+
+        /* Change the arrow direction when submenu is active */
+        .nav-menu .has-submenu.active .arrow {
+            transform: rotate(180deg);
+        }
+
+        .header-button button {
+            background: #555;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        .menu-toggle {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            .nav-menu {
+                display: flex;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 80vw;
+                height: 100vh;
+                background: #333;
+                padding: 20px;
+                transition: transform 0.3s ease-in-out;
+                transform: translateX(-100%);
+                flex-direction: column;
+                z-index: 1000;
+            }
+
+            .nav-menu.active {
+                transform: translateX(0);
+            }
+
+            .nav-menu ul {
+                display: flex;
+                flex-direction: column;
+                margin: 0;
+                padding: 0;
+            }
+
+            .nav-menu ul li {
+                margin: 10px 0;
+            }
+
+            .menu-toggle {
+                display: block;
+                font-size: 24px;
+                cursor: pointer;
+                z-index: 1001;
+            }
+
+            .logo {
+                flex: 1;
+                text-align: center;
+            }
+
+            .header-button {
+                display: block;
+                margin-top: 20px;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <div class="nav-parent">
-        <div class="nav">
-            <input type="checkbox" id="check">
-            <label for="check" class="checkbtn">
-                <i class="fa fa-bars"></i>
-            </label>
-            <div class="logo">
-                <img src="./assets/imgs/upd-logo.png" alt="">
+    <header>
+        <div class="header-container">
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
             </div>
-            <div class="menu-quote">
-                <div class="menus">
-                    <ul>
-                        <li><a href="home.html" class="active">HOME</a></li>
-                        <li><a href="about-us.html">ABOUT US</a></li>
-                        <li><a href="#services">SERVICES<i class="fa fa-chevron-down"></i></a>
-                            <ul id="submenu">
-                                <li><a href="on-grid-solar.html">ON GRID SOLAR</a></li>
-                                <li><a href="off-grid-solar.html">OFF GRID SOLAR</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="contact-us.html">CONTACT US</a></li>
-                        <!--<li><a href="#locations">BLOG</a></li>-->
-                    </ul>
-                </div>
-                <div class="get-quote">
-                    <a href="#">CALL FOR NOW</a>
-                </div>
+            <div class="logo">
+                <img src="logo.png" alt="Logo">
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li class="has-submenu">
+                        <a href="#services">Services <i class="fas fa-chevron-down arrow"></i></a>
+                        <ul class="submenu">
+                            <li><a href="#service1">Service 1</a></li>
+                            <li><a href="#service2">Service 2</a></li>
+                            <li><a href="#service3">Service 3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-button">
+                <button>Action</button>
             </div>
         </div>
-    </div>
+    </header>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navMenu = document.querySelector('.nav-menu');
+            const hasSubmenu = document.querySelectorAll('.has-submenu');
+
+            menuToggle.addEventListener('click', function () {
+                navMenu.classList.toggle('active');
+            });
+
+            hasSubmenu.forEach(item => {
+                item.addEventListener('click', function () {
+                    this.classList.toggle('active');
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>
