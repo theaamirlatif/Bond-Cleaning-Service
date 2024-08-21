@@ -1,14 +1,13 @@
-<?php
+<!-- <?php 
 /*
-Template Name: About Us
+ * Template Name: Contact Us
 */
-?>
+?> -->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
         crossorigin="anonymous" />
@@ -20,11 +19,12 @@ Template Name: About Us
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/about-us.css">
-    <title>About Us | Bond Cleaning Services</title>
+    <link rel="stylesheet" href="./assets/css/contact-us.css">
+    <title>Contact Us | Bond Cleaning Service</title>
 </head>
 
 <body>
+
     <!-- top nav header start -->
     <div class="top-nav-parent">
         <div class="top-nav">
@@ -61,7 +61,7 @@ Template Name: About Us
                             <li><a href="#">BOND CLEANING BRISBANE</a></li>
                         </ul>
                     </li>
-                    <li><a href="#pricing">PRICING</a></li>
+                    <li><a href="#who">PRICING</a></li>
                     <li><a href="https://bondcleaningservice.com/contact-us/">CONTACT US</a></li>
                 </ul>
             </div>
@@ -76,44 +76,43 @@ Template Name: About Us
     <div class="main">
         <div class="main-child">
             <div class="left">
-                <h2>Book A Clean</h2>
-                <span>Don't put up with a smelly bins any longer!</span>
-                <p>Fill out the form to BOOK YOUR BIN CLEAN.</p>
+                <h2>We're Here To Provide 24X7 Support </h2>
+                <p>We're here to make your move stress-free with our 24/7 support. Whether you need to book a service or
+                    have questions, our team is always available to assist you, any time of the day or night.</p>
+                <div class="main-btns">
+                    <a href="#faqs" class="">Frequently Asked Questions <i class="fas fa-arrow-right"></i></a>
+                    <a href="#faqs" class="">All Course Pricing <i class="fas fa-arrow-right"></i></a>
+                    <a href="#faqs" class="">Upcoming Online Courses <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <h3><i class="fa fa-envelope"></i>hello@gmail.com</h3>
+                <h3><i class="fa fa-phone"></i>+62 132 432 342</h3>
+            </div>
+            <div class="right">
+                <h2>Contact us</h2>
+                <p>Contact us for a quote, help or to join the team</p>
                 <form action="">
+                    <p class="frm-text">Get in touch</p>
                     <div class="mb-3">
-                        <input type="text" class="form-control p-3" name="yourname" placeholder="Your Name" required>
+                        <label for="yourname">Name</label>
+                        <input type="text" class="form-control p-3" id="yourname" name="yourname"
+                            placeholder="Your Name" required>
                     </div>
                     <div class="mb-3">
-                        <input type="email" class="form-control p-3" name="email" placeholder="Email" required>
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control p-3" id="email" name="email" placeholder="Email"
+                            required>
                     </div>
                     <div class="mb-3">
-                        <input type="text" class="form-control p-3" name="address" placeholder="Address" required>
+                        <label for="message">Message</label>
+                        <textarea class="form-control p-3" id="message" name="message"
+                            placeholder="Write you message..." required></textarea>
                     </div>
-                    <div class="row mb-3">
-                        <div class="col">
-                            <input type="tel" class="form-control p-3" name="phone" placeholder="Phone Number" required>
-                        </div>
-                        <div class="col">
-                            <input type="date" class="form-control p-3" name="date" required>
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                        <button type="submit" class="form-control p-3">Book Now <i
+                    <div class="mb-3 d-flex justify-content-end">
+                        <button type="submit" class="btn-submit p-3">Send a Message <i
                                 class="fas fa-arrow-right"></i></button>
                     </div>
                 </form>
-            </div>
-            <div class="right">
-                <h3>Book your professional home cleaner in sec.</h3>
-                <div class="points-about">
-                    <h4>1. Book a Cleaning</h4>
-                    <p>Conveniently book your cleaning appointment with just a few clicks.</p>
-                    <h4>2. Confirm Booking</h4>
-                    <p>Receive instant confirmation of your booking to put your mind at ease.</p>
-                    <h4>3. We'll Clean it</h4>
-                    <p>Sit back and relax while our expert team takes care of the cleaning, leaving your home sparkling
-                        and refreshed.</p>
-                </div>
+
             </div>
         </div>
     </div>
@@ -131,7 +130,7 @@ Template Name: About Us
                 </p>
             </div>
             <div class="trusted-service-right">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/trust ser.png" alt="">
+                <img src="./assets/images/trust ser.png" alt="">
             </div>
         </div>
     </div>
@@ -146,7 +145,7 @@ Template Name: About Us
             <div class="bcs-cta-child-right">
                 <form action="#" method="post" class="w-100">
                     <div class="mb-3">
-                        <input type="text" id="fullname" name="fullname" class="form-control w-100 p-3"
+                        <input type="text-name" id="fullname" name="fullname" class="form-control w-100 p-3"
                             placeholder="Your Name" required>
                     </div>
 
@@ -165,37 +164,8 @@ Template Name: About Us
         </div>
     </div>
     <!-- cta section end -->
-    <!-- trusted service start -->
-    <div class="why-choose">
-        <div class="why-choose-child">
-            <div class="why-choose-left">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/why choose.png" alt="">
-            </div>
-            <div class="why-choose-right">
-                <h2>Why choose Bond cleaning to clean your home?</h2>
-                <p>Selecting Bond Cleaning for your home cleaning needs ensures a premium level of service and peace of
-                    mind. With our proven track record of excellence, we offer unmatched professionalism, reliability,
-                    and attention to detail. Our dedicated team utilizes industry-leading techniques and top-quality
-                    products to deliver exceptional results, leaving your home spotless and refreshed. Trust in our
-                    expertise to exceed your expectations and provide you with a hassle-free cleaning experience,
-                    allowing you to enjoy a pristine living space without the stress.
-                </p>
-                <div class="bcs-cta-btns">
-                    <div class="bcs-cta-get-quote-btn">
-                        <a href="tel:0721122729"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/Calendar.png" alt=""><span>Get Fee
-                                Quote</span></a>
-                    </div>
-                    <div class="bcs-cta-call-btn">
-                        <a href="tel:0721122729"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/Call.png" alt=""><span>07 2112
-                                2729</span></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- trusted service end -->
     <!-- bcs bond accordion section start -->
-    <div class="bcs-bond-faqs">
+    <div class="bcs-bond-faqs" id="faqs">
         <div class="bcs-bond-faqs-child">
             <h2>FAQs on Bond Cleaning Brisbane</h2>
             <p>For top-notch bond cleaning services on the Gold Coast, trust our expert team to deliver exceptional
@@ -310,7 +280,7 @@ Template Name: About Us
                     </div>
                 </div>
                 <div class="bcs-bond-left">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/q5.png" alt="">
+                    <img src="./assets/images/q5.png" alt="">
                 </div>
             </div>
         </div>
@@ -386,8 +356,6 @@ Template Name: About Us
     </div>
     <!-- bcs bond footer section end -->
 
-
-
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
@@ -400,6 +368,7 @@ Template Name: About Us
             const menu = document.querySelector('.menus');
             const menuIcon = document.getElementById('menu-icon');
 
+            // Toggle menu icon based on checkbox state
             function updateMenuIcon() {
                 if (checkBox.checked) {
                     menuIcon.classList.remove('fa-bars');
@@ -410,15 +379,19 @@ Template Name: About Us
                 }
             }
 
+            // Update icon on page load
             updateMenuIcon();
 
+            // Update icon when checkbox state changes
             checkBox.addEventListener('change', updateMenuIcon);
 
+            // Toggle menu when icon is clicked
             menuIcon.addEventListener('click', function () {
-                checkBox.checked = !checkBox.checked;
-                updateMenuIcon();
+                checkBox.checked = !checkBox.checked; // Toggle checkbox state
+                updateMenuIcon(); // Update icon based on new checkbox state
             });
 
+            // Close menu when clicking outside
             document.addEventListener('click', function (event) {
                 if (!menu.contains(event.target) && !event.target.matches('#check, #check + label')) {
                     checkBox.checked = false;
